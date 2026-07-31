@@ -134,20 +134,20 @@ The model separates financial transactions, master data, operational drivers, ac
 The Power BI model uses a structured relationship design:
 
 - `Dim_Date` supports monthly and year-to-date analysis.
-- `CostItemMasterTable` contains cost item attributes and links to the monthly cost fact table.
-- `FactCostMonthlyTable` stores budget, actual, and forecast values.
-- `OperationalDriverAnalysisTable` explains the operational causes behind cost variance.
-- `ActionPlanTable` stores mitigation actions, ownership, status, savings, and deadlines.
-- `ScenarioDeliveryTable` stores delivery rates and expected savings by action and scenario.
+- `CostItemMaster` contains cost item attributes and links to the monthly cost fact table.
+- `FactCostMonthly` stores budget, actual, and forecast values.
+- `OperationalDriverAnalysis` explains the operational causes behind cost variance.
+- `ActionPlan` stores mitigation actions, ownership, status, savings, and deadlines.
+- `ScenarioDelivery` stores delivery rates and expected savings by action and scenario.
 - `Scenario Comparison` is a disconnected table used to compare all scenarios in one visual without being filtered by the scenario slicer.
 
 ![Power BI Data Model](images/Data_Model.png)
 
 The central relationships include:
 
-- `CostItemMasterTable[Cost_Item_ID]` → `FactCostMonthlyTable[Cost_Item_ID]`
-- `CostItemMasterTable[Cost_Item_ID]` → `OperationalDriverAnalysisTable[Cost_Item_ID]`
-- `ActionPlanTable[Action_ID]` → `ScenarioDeliveryTable[Action_ID]`
+- `CostItemMaster[Cost_Item_ID]` → `FactCostMonthly[Cost_Item_ID]`
+- `CostItemMaster[Cost_Item_ID]` → `OperationalDriverAnalysis[Cost_Item_ID]`
+- `ActionPlan[Action_ID]` → `ScenarioDelivery[Action_ID]`
 
 The model follows a single-direction filtering approach to keep scenario calculations and action-level analysis predictable.
 
