@@ -298,6 +298,12 @@ The main operational drivers include:
 
 The operational-driver chart allows management to rank the largest causes and drill through to detailed supporting information.
 
+#### Operational Driver Drill-through
+
+Users can right-click an operational driver to review its underlying cost items, controllability, linked management action, and business interpretation.
+
+![Operational Driver Detail](images/05_Operational_Driver_Detail.png)
+
 The drill-through page connects each driver to:
 
 - Underlying cost items
