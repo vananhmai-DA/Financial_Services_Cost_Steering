@@ -131,6 +131,8 @@ The model separates financial transactions, master data, operational drivers, ac
 
 ### 4.2 Data Model
 
+![Power BI Data Model](images/Data_Model.png)
+
 The Power BI model uses a structured relationship design:
 
 - `Dim_Date` supports monthly and year-to-date analysis.
@@ -140,8 +142,6 @@ The Power BI model uses a structured relationship design:
 - `ActionPlan` stores mitigation actions, ownership, status, savings, and deadlines.
 - `ScenarioDelivery` stores delivery rates and expected savings by action and scenario.
 - `Scenario Comparison` is a disconnected table used to compare all scenarios in one visual without being filtered by the scenario slicer.
-
-![Power BI Data Model](images/Data_Model.png)
 
 The central relationships include:
 
